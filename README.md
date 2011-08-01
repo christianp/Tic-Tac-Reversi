@@ -3,7 +3,7 @@ Tic-Tac Othello
 
 A simple game based on Noughts and Crosses with additions from Othello.
 
-Based on @sebble's version.
+Based on [sebble's version](https://github.com/sebble/Tic-Tac-Reversi).
 
 Instructions
 ------------
