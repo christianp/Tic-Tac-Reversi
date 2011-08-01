@@ -1,75 +1,92 @@
-#tto-game {
+.ttrGame {
   font-family: verdana;
+  text-shadow: rgba(0,0,0,.01) 0 0 1px;
   font-size: 2em;
-  line-height: 50px;
   text-align: center;
-  width: 212px;
-  height: 212px;
   margin: 2em auto;
+  padding: 0 1em;
+  cursor:default;
 }
 
-.cell {
+#smaller {
+	font-size: smaller;
+	float:left;
+	cursor:pointer;
+}
+
+#bigger {
+	font-size: larger;
+	float:right;
+	cursor:pointer;
+}
+
+#board {
+	border-spacing: 0;
+	margin: 0 auto;
+}
+
+#board td {
   float: left;
-  width: 50px;
-  height: 50px;
+  width: 1.2em;
+  height: 1.2em;
   /*background-color: #f09;*/
   border: solid 2px #333;
   cursor: pointer;
 }
-.row.first .cell {
+
+#board tr:first-child td {
   border-top: none;
 }
-.cell.first {
-  border-left: none;
+#board td:first-child {
+	border-left: none;
 }
-.row.last .cell {
-  border-bottom: none;
+#board tr:last-child td {
+	border-bottom: none;
 }
-.cell.last {
-  border-right: none;
+#board td:last-child {
+	border-right: none;
 }
-.cell:hover {
+
+#board td:hover {
   background-color: #90f;
   background-color: #fed;
 }
 
-.clear {
-  clear: both;
+#name,td {
+  font-size: 150%;
 }
 
-.player0:after {
-  content: "X";
+#name.player0:after, td.player0:after {
+  content: "\2668";
   color: #09f;
 }
-div.player0 {
+td.player0 {
   background-color: #def;
 }
-.player1:after {
-  content: "O";
+#name.player1:after, td.player1:after {
+  content: "\2603";
   color: #f09;
 }
-div.player1 {
+td.player1 {
   background-color: #fde;
 }
 
-div.win {
-  background-color: #ccc;
+.win {
   text-decoration: line-through;
 }
 
 #reset {
-  padding: 0 0.3em;
+  padding: 0.1em 0.5em;
   background-color:#efd;
   border: solid 2px #333;
   border-radius: 5px;
+  font-size: 1em;
+  text-align: center;
   color: #333;
   text-decoration: none;
-  display: none;
-  position: relative;
-  /*opacity: 0.7;*/
-  top: -130px;
-  width: 150px;
-  margin: 0 auto;
+  cursor:pointer;
+  display:none;
+  margin: 1em auto;
 }
 #reset:hover {
   background-color:#fed;
