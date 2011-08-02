@@ -114,11 +114,11 @@ $.fn.ttrGame = function(tsize) {
 				var winners = $('');
 
 				//select all the squares involved a winning row (there might be more than one winning row)
+				if(x==size)
+					winners=winners.add(elem.find('#board tr').eq(i).find('td'));
+				if(y==size)
+					winners=winners.add(elem.find('#board tr td:nth-child('+(j+1)+')'));
 				for(m=0;m<size;m++){ 
-					if(x==size)
-						winners=winners.add(elem.find('#board tr').eq(i).find('td').eq(m));
-					if(y==size)
-						winners=winners.add(elem.find('#board tr').eq(m).find('td').eq(j));
 					if(d1==size)
 						winners=winners.add(elem.find('#board tr').eq(m).find('td').eq(m));
 					if(d2==size)
