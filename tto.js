@@ -85,6 +85,7 @@ $.fn.ttrGame = function(tsize) {
 						x = i+dx*n;
 						y = j+dy*n;
 						board[x][y] = player;
+						checkWinners(x,y);
 						elem.find('#board tr').eq(x).find('td').eq(y).toggleClass('player0 player1');
 					}
 				}
