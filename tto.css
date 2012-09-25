@@ -27,8 +27,8 @@
 
 #board td {
   float: left;
-  width: 1.2em;
-  height: 1.2em;
+  width: 1em;
+  height: 1em;
   /*background-color: #f09;*/
   border: solid 2px #333;
   cursor: pointer;
